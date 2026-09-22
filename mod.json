@@ -1,0 +1,14 @@
+{
+  "id": "omegatro",
+  "name": "OMEGATRO",
+  "description": "mod that adds whatever i felt like adding, ft: a bunch of inside jokes, unbalanced stuff, meta jokers, spaghetti code (less in more recent additions)",
+  "version": "1.0",
+  "author": ["omega"],
+  "mod_type": "gameplay",
+  "main_file": "main.lua",
+  "prefix": "omega",
+  "badge_colour": "0046FF",
+  	"dependencies": [
+		"Talisman"
+	],
+}
