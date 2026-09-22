@@ -3,7 +3,7 @@ Balatro mod that adds whatever i felt like adding, ft: a bunch of inside jokes, 
 
 # Currently adds:
 * 69 Jokers (nice)
-* Upgraded versions of ever enchancement
+* Upgraded versions of every enchancement
 * New consumable types
 * And other random ahh stuff
 
