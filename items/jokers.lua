@@ -608,6 +608,9 @@ local photograph_fixed = SMODS.Joker{
     ability = {
         extra = 2
     },
+	
+	juice_up = function(self)
+    end,
 
     calculate = function(self, card, context)
     if context.individual and context.cardarea == G.play then
@@ -987,7 +990,7 @@ local gambling = SMODS.Joker{
         text = {
             "{X:mult,C:white}X0.25{} Mult every time",
 			"{C:attention}Wheel of Fortune{} is used",
-			"{C:inactive}(Currently: {}{X:mult,C:white}#1#{}{C:inactive} Mult){}"
+			"{C:inactive}(Currently: {}{X:mult,C:white}X#1#{}{C:inactive} Mult){}"
         }
     },
 	
