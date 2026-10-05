@@ -19,7 +19,7 @@ I did "borrow" the code for two jokers from other mods (sowwy):
 Prophecy (from Yahiamod)
 Reboot card (from All in Jest)
 
-Some meta jokers in this mod require the mod to acess internet and one of them uses windows powershell to get your current space in your computer
+Some meta jokers in this mod require the mod to acess internet and one of them uses windows powershell / linux bash to get your current space in your computer
 
 i've been working on this mod for a while and learnt alot during it, hope you like it!
 

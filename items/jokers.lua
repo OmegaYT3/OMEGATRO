@@ -1296,14 +1296,26 @@ local disco = SMODS.Joker{
 set_ability = function(self, card, initial, delay_sprites)
     local free_gb = 0
 
-    local handle = io.popen('powershell -NoProfile -Command "(Get-PSDrive C).Free" 2>nul')
-    if handle then
-        local output = handle:read("*a")
-        handle:close()
-        local bytes = output:match("(%d+)")
-        if bytes then
-            free_gb = tonumber(bytes) / (1024^3)
+    local bytes
+    local os = love.system.getOS()
+    if os == "Linux" then
+        local handle = io.popen("df -B1 / | awk '{print $4}'")
+        if handle then
+            local output = handle:read("*a")
+            handle:close()
+            bytes = tonumber(output:match("%d+\n$"))
         end
+    elseif os == "Windows" then
+        local handle = io.popen('powershell -NoProfile -Command "(Get-PSDrive C).Free" 2>nul')
+        if handle then
+            local output = handle:read("*a")
+            handle:close()
+            bytes = tonumber(output:match("(%d+)"))
+        end
+    end
+
+    if bytes then
+        free_gb = bytes / (1024^3)
     end
 
     card.ability.extra.mult = math.floor(free_gb) / 10
