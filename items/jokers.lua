@@ -349,8 +349,8 @@ SMODS.Atlas{
 }
 
 SMODS.Atlas{
-    key = '👀',
-    path = '👀.png',
+    key = 'eyes',
+    path = 'eyes.png',
     px = 71,
     py = 95
 }
